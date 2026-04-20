@@ -5,11 +5,50 @@
 <img src="logo-eahp.svg" alt="Eahp Logo" width="300px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 ### Background
-TODO
+
+Hospital pharmacies across Europe increasingly rely on automation 
+devices — Whole Pack Robots (WPR), Automated Dispensing Cabinets 
+(ADC), Unit Dose Robots (UDR) — to manage medication storage, 
+dispensing, and traceability. These devices are typically procured 
+from different vendors and are expected to operate as an integrated 
+system within the hospital pharmacy.
+
+In practice, communication between devices from different vendors 
+requires bespoke, point-to-point integrations. Each integration is 
+developed and maintained independently, creating significant cost, 
+fragility, and barrier to procurement flexibility. No shared standard 
+has existed for the exchange of supply and inventory information 
+between pharmacy automation devices.
+
+The EAHP Special Interest Group (SIG) on Interoperability in Pharmacy 
+Automation was established to address this gap. The SIG brings together 
+hospital pharmacists, automation vendors, and standards experts from 
+across Europe. Its mandate is to define a vendor-neutral, 
+pharmacist-validated standard for communication between automation 
+devices — enabling plug-and-play interoperability across competing 
+products.
+
+The SIG operates in two phases. Phase 1 established governance 
+structures, shared definitions, and functional Standard Operating 
+Procedures (SOPs) for each target use case. Phase 2, of which this 
+Implementation Guide is the primary output, translates those SOPs 
+into a FHIR-based technical specification.
+
+At the EAHP Congress in Barcelona (March 2026), ten vendors 
+demonstrated live multi-vendor interoperability using the protocol 
+defined in this IG — covering 14 devices and 56 device-to-device 
+combinations — with zero per-vendor customisation. This IG formalises 
+that protocol.
 
 ### Motivations for the EAHP interoperability implementation guide
 
-TODO
+Fragmented integrations. Automation devices typically communicate with the Pharmacy Management System (PMS) through point-to-point, proprietary connectors — one per device. Each new connector is usally specific to the combination of device and PMS, and has to be  updated when either system is upgraded or replaced. Across a market with dozens of device vendors and multiple PMS platforms, this creates a large and fragmented integration landscape with no shared components, no portability, and no economies of scale.
+
+Integration cost and complexity. In the absence of a shared standard, the cost of connecting automation devices falls entirely on the hospital — through middleware procurement, bespoke development, and ongoing maintenance. This cost is a barrier to automation adoption, particularly for smaller institutions, and diverts pharmacy IT resources away from higher-value work.
+
+Traceability gaps. Without standardised message exchange, audit trails for medication movements between automation devices are fragmented. Reconstructing the chain of custody for a medication across a multi-vendor environment is manual, error-prone, and incomplete.
+
+Regulatory alignment. The European Health Data Space (EHDS) and evolving national frameworks increasingly require structured, traceable, interoperable data from clinical systems — including systems managing medication stock. A shared FHIR standard for pharmacy automation positions hospitals to meet these requirements without per-system customisation.
 
 ### Integration Overview
 An overview of the integration with some sample messages is available here:
